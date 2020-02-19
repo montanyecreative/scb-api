@@ -1,12 +1,12 @@
 {
   "name": "scb-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple API that retrieves JSON data for the Simplest Cookbook app.",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"
   },
-  "author": "",
+  "author": "Gateway IT Consulting",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",

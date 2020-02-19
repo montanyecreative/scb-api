@@ -14,17 +14,6 @@ const recipeRoutes = (app, fs) => {
         });
     };
 
-    // const writeFile = (fileData, callback, filePath = dataPath, encoding = 'utf8') => {
-
-    //     fs.writeFile(filePath, fileData, encoding, (err) => {
-    //         if (err) {
-    //             throw err;
-    //         }
-
-    //         callback();
-    //     });
-    // };
-
     // READ
     app.get('/recipes', (req, res) => {
         fs.readFile(dataPath, 'utf8', (err, data) => {
@@ -35,56 +24,6 @@ const recipeRoutes = (app, fs) => {
             res.send(JSON.parse(data));
         });
     });
-
-    // CREATE
-    // app.post('/recipes', (req, res) => {
-
-    //     readFile(data => {
-    //         const newUserId = Object.keys(data).length + 1;
-
-    //         // add the new user
-    //         data[newUserId.toString()] = req.body;
-
-    //         writeFile(JSON.stringify(data, null, 2), () => {
-    //             res.status(200).send('new user added');
-    //         });
-    //     },
-    //         true);
-    // });
-
-
-    // UPDATE
-    // app.put('/recipes/:id', (req, res) => {
-
-    //     readFile(data => {
-
-    //         // add the new user
-    //         const userId = req.params["id"];
-    //         data[userId] = req.body;
-
-    //         writeFile(JSON.stringify(data, null, 2), () => {
-    //             res.status(200).send(`recipes id:${userId} updated`);
-    //         });
-    //     },
-    //         true);
-    // });
-
-
-    // DELETE
-    // app.delete('/recipes/:id', (req, res) => {
-
-    //     readFile(data => {
-
-    //         // add the new user
-    //         const userId = req.params["id"];
-    //         delete data[userId];
-
-    //         writeFile(JSON.stringify(data, null, 2), () => {
-    //             res.status(200).send(`recipes id:${userId} removed`);
-    //         });
-    //     },
-    //         true);
-    // });
 };
 
 module.exports = recipeRoutes;
